@@ -16,7 +16,7 @@ public class LoginRegisterStart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_register_start);
     }
-//my name is julius
+//my name is juliusjj
 
     public void login_function(View view) {
         startActivity(new Intent(LoginRegisterStart.this,LoginPage.class));
