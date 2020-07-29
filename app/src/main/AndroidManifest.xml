@@ -8,9 +8,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:fullBackupContent="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main_page"></activity>
+        <activity android:name=".main_page"/>
         <activity android:name=".OnBoarding" />
+        <activity android:name="com.juliusnyambok.Common.LoginRegisterStart" />
+        <activity android:name="com.juliusnyambok.Common.SignupPage"/>
+        <activity android:name="com.juliusnyambok.Common.LoginPage"/>
+
+
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

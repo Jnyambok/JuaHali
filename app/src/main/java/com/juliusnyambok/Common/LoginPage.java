@@ -12,16 +12,12 @@ import com.juliusnyambok.juahaliyako.MainActivity;
 import com.juliusnyambok.juahaliyako.R;
 
 public class LoginPage extends AppCompatActivity {
-ImageView imgClick;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
     }
-
-
-
-
 
 
 

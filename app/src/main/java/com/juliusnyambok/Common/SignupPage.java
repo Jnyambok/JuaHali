@@ -16,6 +16,10 @@ public class SignupPage extends AppCompatActivity {
         setContentView(R.layout.activity_signup_page);
     }
 
+
+
+
+
     public void login_function(View view) {
         startActivity(new Intent(SignupPage.this,SignupPage.class));
     }

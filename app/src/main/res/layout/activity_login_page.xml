@@ -115,7 +115,8 @@
             <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login" android:background="@drawable/rounded_button"
+            android:text="@string/login"
+                android:background="@drawable/rounded_button"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="20dp"
             />
@@ -123,7 +124,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Create an Account"
+                android:text="@string/create_an_account"
                 android:background="@drawable/rounded_button"
                 android:textColor="@color/colorWhite"
                 android:onClick="sign_in_function"

@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.juliusnyambok.Common.LoginRegisterStart;
+
 public class OnBoarding extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
@@ -96,7 +98,7 @@ public class OnBoarding extends AppCompatActivity {
             mNextButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(OnBoarding.this,main_page.class));
+                    startActivity(new Intent(OnBoarding.this, LoginRegisterStart.class));
 
                 }
             });
