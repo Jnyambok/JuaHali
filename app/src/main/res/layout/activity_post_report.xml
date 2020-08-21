@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostReport"
+    android:background="@color/colorAccent"
+    android:padding="0dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/back_to_disasters"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_icon"
+            android:contentDescription="@string/back"
+            android:padding="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/report_a_disaster"
+            android:textAllCaps="true"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Disaster Type"
+                android:id="@+id/disaster_type"
+                android:layout_margin="5dp"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/ic_warning"
+                app:endIconMode="clear_text"
+                app:helperTextEnabled="true"
+                app:helperText="Pick the appropriate category"
+
+
+                >
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:inputType="text"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Disaster Name"
+                android:id="@+id/disaster_desc"
+                android:layout_margin="5dp"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/ic_error"
+                app:endIconMode="clear_text"
+                app:helperTextEnabled="true"
+                app:helperText="Provide a description"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+
+                >
+
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:inputType="text"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="Location"
+                android:id="@+id/loginpassword"
+                android:layout_margin="5dp"
+                app:boxStrokeColor="@color/colorPrimaryDark"
+                app:boxStrokeWidthFocused="2dp"
+                app:startIconDrawable="@drawable/ic_location_marker"
+                app:endIconMode="clear_text"
+                app:helperTextEnabled="true"
+                app:helperText="Provide the location for the disaster"
+
+
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Post"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="20dp"
+                android:id="@+id/postdisaster"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>

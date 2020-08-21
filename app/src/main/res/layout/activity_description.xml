@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescriptionActivity">
+    <ImageView
+        android:id="@+id/disaster_image_desc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingBottom="10dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/disaster_name_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disaster_name"
+        android:textColor="#000000"
+        android:layout_alignBottom="@+id/disaster_image_desc"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_marginTop="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        />
+    <TextView
+        android:id="@+id/disaster_location_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textColor="?android:textColorSecondary"
+        android:layout_below="@id/disaster_name_desc"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_marginTop="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:drawableStart="@drawable/location"
+        android:drawableLeft="@drawable/location" />
+    <View
+        android:id="@+id/divider_desc"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/disaster_location_desc"
+        android:background="#808080"/>
+
+    <TextView
+        android:id="@+id/disaster_description_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/disaster_description"
+        android:textColor="#213240"
+        android:layout_below="@id/divider_desc"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_marginTop="3dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:textStyle="italic"/>
+
+
+</RelativeLayout>
