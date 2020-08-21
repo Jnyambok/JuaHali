@@ -8,4 +8,29 @@
     <string name="welcome">Welcome</string>
     <string name="create_an_account">Create an account</string>
     <string name="back">back</string>
+
+
+    <string name="jua_hali">JUA HALI</string>
+    <string name="disaster_locations">Disaster Locations</string>
+    <string name="disaster_description">Disaster Description</string>
+    <string name="location">Location</string>
+    <string name="disaster_name">Disaster Name</string>
+    <string name="jua_hali_yako">JUA HALI YAKO</string>
+    <string name="HOME" />
+    <string name="home">HOME</string>
+    <string name="report_a_disaster">Report a disaster</string>
+    <array name="disaster_image">
+        <item>@drawable/dis</item>
+    </array>
+    <string-array name="disaster_name">
+        <item>Earthquake</item>
+    </string-array>
+    <string-array name="disaster_location">
+        <item>Muranga</item>
+    </string-array>
+    <string-array name="disaster_description">
+        <item>Very bad</item>
+    </string-array>
+
+
 </resources>

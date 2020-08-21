@@ -4,19 +4,22 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:fullBackupContent="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main_page"/>
+        <activity android:name=".PostReport"/>
+        <activity android:name=".main_page" />
         <activity android:name=".OnBoarding" />
         <activity android:name="com.juliusnyambok.Common.LoginRegisterStart" />
-        <activity android:name="com.juliusnyambok.Common.SignupPage"/>
-        <activity android:name="com.juliusnyambok.Common.LoginPage"/>
-
-
+        <activity android:name="com.juliusnyambok.Common.SignupPage" />
+        <activity android:name="com.juliusnyambok.Common.LoginPage" />
+        <activity android:name=".RecyclerViewMain" />
+        <activity
+            android:name=".DescriptionActivity"
+            android:theme="@style/CynthiaAppTheme" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
