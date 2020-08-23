@@ -7,11 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 
 
-
-
-
-
-import android.media.Image;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -20,7 +15,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+
+//the first page that shows up with the first animation
+public class StartingPage extends AppCompatActivity {
 
     private static int SPLASH_SCREEN=2000;
 //animation variables
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        //Animations
+        //Page animations
         topAnim= AnimationUtils.loadAnimation(this,R.anim.top_animation);
         BottomAnim= AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(MainActivity.this,OnBoarding.class);
+                Intent intent=new Intent(StartingPage.this,OnBoarding.class);
                 startActivity(intent);
                 finish();
             }

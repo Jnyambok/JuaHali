@@ -22,6 +22,11 @@ public class OnBoarding extends AppCompatActivity {
     private Button mBackButton;
     private int mCurrentPage;
 
+
+
+
+
+    //The onboarding page with the tutorials on how to use the application
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

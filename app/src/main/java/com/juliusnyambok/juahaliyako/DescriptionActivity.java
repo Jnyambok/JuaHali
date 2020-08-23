@@ -14,6 +14,8 @@ public class DescriptionActivity extends AppCompatActivity {
     TextView dName,dLocation,dDescription;
     ImageView dImage;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

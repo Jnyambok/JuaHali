@@ -8,8 +8,8 @@
     <string name="welcome">Welcome</string>
     <string name="create_an_account">Create an account</string>
     <string name="back">back</string>
-
-
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close Navigation drawe</string>
     <string name="jua_hali">JUA HALI</string>
     <string name="disaster_locations">Disaster Locations</string>
     <string name="disaster_description">Disaster Description</string>
@@ -19,6 +19,14 @@
     <string name="HOME" />
     <string name="home">HOME</string>
     <string name="report_a_disaster">Report a disaster</string>
+    <string name="reports">Reports</string>
+    <string name="profile">Profile</string>
+
+    <string name="logout">Logout</string>
+    <string name="talk_with_us">Talk with us</string>
+    <string name="interact_with_us">Interact with us</string>
+    <string name="homee">Home</string>
+    <string name="be_cautious_during_these_times">Be cautious during these times.</string>
     <array name="disaster_image">
         <item>@drawable/dis</item>
     </array>

@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class PostReport extends AppCompatActivity {
 
-
+//The reporting disasters page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

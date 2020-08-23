@@ -9,7 +9,7 @@ import android.view.View;
 import com.juliusnyambok.juahaliyako.R;
 
 public class SignupPage extends AppCompatActivity {
-
+//The sign up page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class SignupPage extends AppCompatActivity {
 
 
 
-
+//Goes to the sign up page
     public void login_function(View view) {
         startActivity(new Intent(SignupPage.this,SignupPage.class));
     }

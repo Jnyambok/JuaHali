@@ -14,6 +14,8 @@ public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickLis
 
 
      MyHolder(@NonNull View itemView) {
+
+       //Binding the resources from the respective layout files
         super(itemView);
         this.disasterImage=itemView.findViewById(R.id.disaster_image);
         this.disasterName=itemView.findViewById(R.id.disaster_name);
@@ -23,6 +25,7 @@ public class MyHolder extends RecyclerView.ViewHolder implements View.OnClickLis
 
         itemView.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
