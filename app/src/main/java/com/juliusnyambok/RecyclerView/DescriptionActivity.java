@@ -1,4 +1,4 @@
-package com.juliusnyambok.juahaliyako;
+package com.juliusnyambok.RecyclerView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.juliusnyambok.juahaliyako.R;
 
 public class DescriptionActivity extends AppCompatActivity {
     TextView dName,dLocation,dDescription;
@@ -26,7 +28,7 @@ public class DescriptionActivity extends AppCompatActivity {
         dName=findViewById(R.id.disaster_name_desc);
         dLocation=findViewById(R.id.disaster_location_desc);
         dDescription=findViewById(R.id.disaster_description_desc);
-        dImage=findViewById(R.id.disaster_image_desc);
+
 
 
         Intent intent=getIntent();

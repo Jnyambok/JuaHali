@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerViewMain">
+    tools:context="com.juliusnyambok.RecyclerView.RecyclerViewMain"
+    android:orientation="horizontal"
+    android:id="@+id/recycler_main">
+
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
@@ -13,7 +16,7 @@
         android:fitsSystemWindows="true"
         tools:openDrawer="start">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_intro">
@@ -21,11 +24,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_disaster"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
 

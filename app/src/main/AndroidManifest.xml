@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.juliusnyambok.juahaliyako">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
@@ -16,9 +16,9 @@
         <activity android:name="com.juliusnyambok.Common.LoginRegisterStart" />
         <activity android:name="com.juliusnyambok.Common.SignupPage" />
         <activity android:name="com.juliusnyambok.Common.LoginPage" />
-        <activity android:name=".RecyclerViewMain"/>
+        <activity android:name="com.juliusnyambok.RecyclerView.RecyclerViewMain"/>
         <activity
-            android:name=".DescriptionActivity"
+            android:name="com.juliusnyambok.RecyclerView.DescriptionActivity"
             android:theme="@style/CynthiaAppTheme" />
 
         <activity android:name=".StartingPage">

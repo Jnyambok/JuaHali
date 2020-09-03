@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.juliusnyambok.RecyclerView.RecyclerViewMain;
+
 public class PostReport extends AppCompatActivity {
 
 //The reporting disasters page
@@ -20,7 +22,7 @@ public class PostReport extends AppCompatActivity {
         postdisaster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(PostReport.this,RecyclerViewMain.class);
+                Intent intent=new Intent(PostReport.this, RecyclerViewMain.class);
                 startActivity(intent);
                 Toast toast = Toast.makeText(getApplicationContext(), "Disaster has been posted successfully!", Toast.LENGTH_LONG);
                 toast.show();
