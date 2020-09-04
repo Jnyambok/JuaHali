@@ -41,8 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="Disaster Name"
-                android:id="@+id/disaster_type"
+                android:hint="Disaster Type"
+
                 android:layout_margin="5dp"
                 app:boxStrokeColor="@color/colorPrimaryDark"
                 app:boxStrokeWidthFocused="2dp"
@@ -55,13 +55,12 @@
                 >
 
 
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_light"
                     android:inputType="text"
-
+                    android:id="@+id/disaster_type"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -88,7 +87,7 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Disaster Description"
-                android:id="@+id/disaster_desc"
+
                 android:layout_margin="5dp"
                 app:boxStrokeColor="@color/colorPrimaryDark"
                 app:boxStrokeWidthFocused="2dp"
@@ -108,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_light"
                     android:inputType="text"
-
+                    android:id="@+id/post_disaster_desc"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -121,7 +120,7 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Location"
-                android:id="@+id/loginpassword"
+
                 android:layout_margin="5dp"
                 app:boxStrokeColor="@color/colorPrimaryDark"
                 app:boxStrokeWidthFocused="2dp"
@@ -138,7 +137,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_light"
-                    android:inputType="textPassword"
+                    android:inputType="text"
+                    android:id="@+id/location"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -151,6 +151,7 @@
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="20dp"
                 android:id="@+id/postdisaster"
+
                 />
 
 

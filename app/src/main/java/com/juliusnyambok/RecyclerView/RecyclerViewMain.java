@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,6 +24,7 @@ import com.juliusnyambok.juahaliyako.R;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -48,14 +51,7 @@ public class RecyclerViewMain extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.recycler_view_main);
 
-
-
-//
-//        disastersRecyclerView=findViewById(R.id.recycler_disaster);
-//        disastersRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        disasterAdapter=new DisasterAdapter(ds, this);
-//        disastersRecyclerView.setAdapter(disasterAdapter);
+     //   RecyclerView recyclerView=findViewById(R.id.recycler_disaster);
 
         fab=findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -81,13 +77,44 @@ public class RecyclerViewMain extends AppCompatActivity {
         getDisasterResponse();
         //Method that is responsible for JSON parsing and retrieving the disasters.
 
-
-
+//
+//        final SwipeRefreshLayout swipeRefreshLayout=(SwipeRefreshLayout) findViewById(R.id.swiper);
+//        RecyclerView recyclerView=findViewById(R.id.recycler_disaster);
+//        swipeRefreshLayout.setColorSchemeColorsResources(R.color.colorAccent,R.color.colorAccent,R.color.colorAccent);
+//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                swipeRefreshLayout.setRefreshing(true);
+//                (new Handler()).postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        swipeRefreshLayout.setRefreshing(false);
+//                        int min=65;
+//                        int max=50;
+//                        Random random=new Random();
+//                        int i=random.nextInt(max-min+1)+min;
+//                        swipeRefreshLayout=
+//
+//
+//   Method to refresh page
+//
+//
+//
+//
+//                    }
+//                })
+//            }
+//        });
 
 
 
 
     }
+
+
+
+
+
 
     private void getDisasterResponse() {
         Retrofit retrofit=new Retrofit.Builder()                                         //The Retrofit class generates an implementation of the GitHubService interface.
@@ -130,8 +157,6 @@ public class RecyclerViewMain extends AppCompatActivity {
         disastersRecyclerView.setLayoutManager(layoutManager);
         disastersRecyclerView.setAdapter(disasterAdapter);
 
-
-
     }
 
 
@@ -146,9 +171,6 @@ public class RecyclerViewMain extends AppCompatActivity {
 
 
 
-
-
-    //Array List containing the contents of the cardviews.
 
 
 
