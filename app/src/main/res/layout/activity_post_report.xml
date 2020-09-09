@@ -61,6 +61,7 @@
                     android:fontFamily="@font/poppins_light"
                     android:inputType="text"
                     android:id="@+id/disaster_type"
+
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -120,12 +121,10 @@
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="Location"
-
                 android:layout_margin="5dp"
                 app:boxStrokeColor="@color/colorPrimaryDark"
                 app:boxStrokeWidthFocused="2dp"
                 app:startIconDrawable="@drawable/ic_location_marker"
-                app:endIconMode="clear_text"
                 app:helperTextEnabled="true"
                 app:helperText="Provide the location for the disaster"
 
@@ -134,12 +133,12 @@
 
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_light"
                     android:inputType="text"
-                    android:id="@+id/location"
-                    />
+                   />
 
             </com.google.android.material.textfield.TextInputLayout>
 

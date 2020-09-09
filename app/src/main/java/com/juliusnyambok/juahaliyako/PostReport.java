@@ -2,6 +2,7 @@ package com.juliusnyambok.juahaliyako;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,6 +17,7 @@ import com.juliusnyambok.RecyclerView.OuterClass;
 import com.juliusnyambok.RecyclerView.RecyclerViewMain;
 import com.juliusnyambok.RecyclerView.RequestInterface;
 
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,12 +29,13 @@ public class PostReport extends AppCompatActivity {
     private static final String TAG = "";
 
 
+
     //The reporting disasters page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post_report);
 
+        setContentView(R.layout.activity_post_report);
 
 
 
@@ -95,6 +98,12 @@ public class PostReport extends AppCompatActivity {
            });
 
        }
+
+
+
+
+
+
 
 
 

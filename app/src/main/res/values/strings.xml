@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Juahaliyako</string>
+    <string name="app_name">Jua Hali</string>
     <string name="remember_me">Remember me</string>
     <string name="forgotten_password">Forgotten password</string>
     <string name="login">Login</string>
@@ -17,7 +17,7 @@
     <string name="disaster_name">Disaster Name</string>
     <string name="jua_hali_yako">JUA HALI YAKO</string>
     <string name="HOME" />
-
+    <string name="mapbox_access_token">sk.eyJ1IjoicnlhbndpbGxpYW1za2UiLCJhIjoiY2tlbGY3MGZjMnB0YzJzbHRzM3hqeWI3NCJ9.LNnBWk_MvJRc5Jq5AKMUNQ</string>
     <string name="report_a_disaster">Report a disaster</string>
     <string name="reports">Reports</string>
     <string name="profile">Profile</string>
@@ -27,6 +27,7 @@
     <string name="interact_with_us">Interact with us</string>
     <string name="homee">Home</string>
     <string name="be_cautious_during_these_times">Be cautious during these times.</string>
+    <string name="share_the_app">Share the app</string>
     <array name="disaster_image">
         <item>@drawable/dis</item>
     </array>

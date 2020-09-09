@@ -1,19 +1,25 @@
 package com.juliusnyambok.RecyclerView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -33,15 +39,16 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class RecyclerViewMain extends AppCompatActivity {
+public class RecyclerViewMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private RecyclerView disastersRecyclerView;//the disaster recycler view
     private DisasterAdapter disasterAdapter; //the disaster adapter
-
-
+//    private RelativeLayout cardview;
+    SwipeRefreshLayout swipeRefreshLayout;
     private FloatingActionButton fab;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
+
 
 
 
@@ -50,9 +57,23 @@ public class RecyclerViewMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.recycler_view_main);
+        setNavigationViewListener();
 
      //   RecyclerView recyclerView=findViewById(R.id.recycler_disaster);
 
+        swipeRefreshLayout=findViewById(R.id.swiper);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeRefreshLayout.setColorSchemeResources(R.color.colorAccent);
+                Toast.makeText(RecyclerViewMain.this, "Page Refreshed! ", Toast.LENGTH_SHORT).show();
+                getDisasterResponse();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+
+
+        //Adding the swiper refresh layout.
         fab=findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +82,21 @@ public class RecyclerViewMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+//         disaster_name=findViewById(R.id.disaster_name);
+//         disaster_location=findViewById(R.id.disaster_location);
+//         disaster_description=findViewById(R.id.disaster_description);
+//
+
+
+
+
+
+
+
+
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.nav_view);
@@ -72,46 +108,21 @@ public class RecyclerViewMain extends AppCompatActivity {
         toggle.syncState();
         //methods for inititalizing the toolbar thats in the Recycler View Main Layout
 
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+
+
+
 
 
         getDisasterResponse();
-        //Method that is responsible for JSON parsing and retrieving the disasters.
-
-//
-//        final SwipeRefreshLayout swipeRefreshLayout=(SwipeRefreshLayout) findViewById(R.id.swiper);
-//        RecyclerView recyclerView=findViewById(R.id.recycler_disaster);
-//        swipeRefreshLayout.setColorSchemeColorsResources(R.color.colorAccent,R.color.colorAccent,R.color.colorAccent);
-//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                swipeRefreshLayout.setRefreshing(true);
-//                (new Handler()).postDelayed(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        swipeRefreshLayout.setRefreshing(false);
-//                        int min=65;
-//                        int max=50;
-//                        Random random=new Random();
-//                        int i=random.nextInt(max-min+1)+min;
-//                        swipeRefreshLayout=
-//
-//
-//   Method to refresh page
-//
-//
-//
-//
-//                    }
-//                })
-//            }
-//        });
-
 
 
 
     }
-
-
 
 
 
@@ -157,29 +168,49 @@ public class RecyclerViewMain extends AppCompatActivity {
         disastersRecyclerView.setLayoutManager(layoutManager);
         disastersRecyclerView.setAdapter(disasterAdapter);
 
+
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Uri contentUri= Uri.parse("https://play.google.com/store/apps/details?id=my.example.Juahali");
+        if (item.getItemId() == R.id.nav_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Check out this informative application that lets you inform and lets you be informed about disasters on playstore "+ contentUri);
+            sendIntent.setType("text/plain");
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
+        }
+
+
+
+        else if (item.getItemId()==R.id.nav_chat){
+            String email = "juahalifeedback@gmail.com";
+                    String subject ="HAPPY WITH THE APP";
+                    String body = "Hello my name is........... ";
+                    String chooserTitle = "Choose your appropriate email application to talk with us";
+            Uri uri = Uri.parse("mailto:" + email)
+                    .buildUpon()
+                    .appendQueryParameter("subject", subject)
+                    .appendQueryParameter("body", body)
+
+                    .build();
+
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, uri);
+            startActivity(Intent.createChooser(emailIntent, chooserTitle));
+
+
+        }
 
 
 
 
 
+                return true;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    private void setNavigationViewListener() {
+    }
 }

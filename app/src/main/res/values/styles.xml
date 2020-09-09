@@ -9,6 +9,7 @@
     </style>
 
 
+
     <style name="CynthiaAppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>

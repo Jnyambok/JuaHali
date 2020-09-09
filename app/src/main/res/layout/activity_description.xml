@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:padding="10dp"
-
+        android:fontFamily="@font/poppins_light"
         android:text="@string/disaster_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#000000"
@@ -26,6 +26,7 @@
         android:textColor="?android:textColorSecondary"
         android:layout_below="@id/disaster_name_desc"
         android:padding="10dp"
+        android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:layout_marginTop="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Light"
@@ -46,10 +47,12 @@
         android:textColor="#213240"
         android:layout_below="@id/divider_desc"
         android:padding="8dp"
+        android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:layout_marginTop="3dp"
         android:theme="@style/ThemeOverlay.AppCompat.Light"
-        android:textStyle="italic"/>
+        />
+
 
 
 </RelativeLayout>

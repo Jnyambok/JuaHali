@@ -14,16 +14,12 @@ import com.juliusnyambok.juahaliyako.R;
 
 public class DescriptionActivity extends AppCompatActivity {
     TextView dName,dLocation,dDescription;
-    ImageView dImage;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        ActionBar actionBar= getSupportActionBar();
 
         dName=findViewById(R.id.disaster_name_desc);
         dLocation=findViewById(R.id.disaster_location_desc);
@@ -35,17 +31,15 @@ public class DescriptionActivity extends AppCompatActivity {
 
         String mName=intent.getStringExtra("iName");
         String mLocation=intent.getStringExtra("iLocation");
-        String mDescription=intent.getStringExtra("iDescription");
-        byte[] mBytes=getIntent().getByteArrayExtra("iImage");
+        String mDescription=intent.getStringExtra("iDesc");
 
-        //decode image
-        Bitmap bitmap= BitmapFactory.decodeByteArray(mBytes,0,mBytes.length);
-        actionBar.setTitle(mName);
+
+
 
 
         dName.setText(mName);
         dLocation.setText(mLocation);
         dDescription.setText(mDescription);
-        dImage.setImageBitmap(bitmap);
+
     }
 }
