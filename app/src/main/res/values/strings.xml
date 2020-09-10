@@ -17,7 +17,7 @@
     <string name="disaster_name">Disaster Name</string>
     <string name="jua_hali_yako">JUA HALI YAKO</string>
     <string name="HOME" />
-    <string name="mapbox_access_token">sk.eyJ1IjoicnlhbndpbGxpYW1za2UiLCJhIjoiY2tlbGY3MGZjMnB0YzJzbHRzM3hqeWI3NCJ9.LNnBWk_MvJRc5Jq5AKMUNQ</string>
+
     <string name="report_a_disaster">Report a disaster</string>
     <string name="reports">Reports</string>
     <string name="profile">Profile</string>
@@ -28,6 +28,7 @@
     <string name="homee">Home</string>
     <string name="be_cautious_during_these_times">Be cautious during these times.</string>
     <string name="share_the_app">Share the app</string>
+    <string name="disaster_type">Disaster Type</string>
     <array name="disaster_image">
         <item>@drawable/dis</item>
     </array>

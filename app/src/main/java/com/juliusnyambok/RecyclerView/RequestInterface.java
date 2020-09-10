@@ -17,7 +17,7 @@ public interface RequestInterface {
     @FormUrlEncoded
     Call<OuterClass> setDisasters(
             @Field("disasterName") String disasterT,
-            @Field("location") String locat,
+            @Field("location") String disasterLocality,
             @Field("description") String disasterD);
 
 }
